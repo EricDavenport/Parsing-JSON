@@ -105,9 +105,106 @@ struct Strain: Decodable {
 }
 
 do {
-  let dictionary = try JSONDecoder().decode([String: [Strain].self], from: json)
+  let dictionary = try JSONDecoder().decode( [String: Strain].self, from: json)
   // use a for-loop to create [Strain] or use map {}
+  var strains = [Strain]()
+  for (_, value) in dictionary {
+    let strain = Strain(id: value.id, race: value.race, flavors: value.flavors, effects: value.effects)
+    strains.append(strain)
+  }
+  dump(strains)
 } catch {
   print("Decoding error: \(error)")
 }
 
+/*
+▿3 elements
+ ▿ __lldb_expr_18.Strain
+   - id: 1
+   - race: "hybrid"
+   ▿ flavors: 3 elements
+     - "Earthy"
+     - "Chemical"
+     - "Pine"
+   ▿ effects: 3 key/value pairs
+     ▿ (2 elements)
+       - key: "positive"
+       ▿ value: 4 elements
+         - "Relaxed"
+         - "Hungry"
+         - "Happy"
+         - "Sleepy"
+     ▿ (2 elements)
+       - key: "negative"
+       ▿ value: 1 element
+         - "Dizzy"
+     ▿ (2 elements)
+       - key: "medical"
+       ▿ value: 5 elements
+         - "Depression"
+         - "Insomnia"
+         - "Pain"
+         - "Stress"
+         - "Lack of Appetite"
+ ▿ __lldb_expr_18.Strain
+   - id: 3
+   - race: "hybrid"
+   ▿ flavors: 3 elements
+     - "Pepper"
+     - "Flowery"
+     - "Pine"
+   ▿ effects: 3 key/value pairs
+     ▿ (2 elements)
+       - key: "positive"
+       ▿ value: 5 elements
+         - "Relaxed"
+         - "Hungry"
+         - "Euphoric"
+         - "Uplifted"
+         - "Tingly"
+     ▿ (2 elements)
+       - key: "negative"
+       ▿ value: 3 elements
+         - "Dizzy"
+         - "Dry Mouth"
+         - "Paranoid"
+     ▿ (2 elements)
+       - key: "medical"
+       ▿ value: 6 elements
+         - "Depression"
+         - "Insomnia"
+         - "Pain"
+         - "Stress"
+         - "Cramps"
+         - "Headache"
+ ▿ __lldb_expr_18.Strain
+   - id: 2
+   - race: "sativa"
+   ▿ flavors: 3 elements
+     - "Spicy/Herbal"
+     - "Pungent"
+     - "Earthy"
+   ▿ effects: 3 key/value pairs
+     ▿ (2 elements)
+       - key: "medical"
+       ▿ value: 6 elements
+         - "Depression"
+         - "Pain"
+         - "Stress"
+         - "Lack of Appetite"
+         - "Nausea"
+         - "Headache"
+     ▿ (2 elements)
+       - key: "positive"
+       ▿ value: 5 elements
+         - "Euphoric"
+         - "Happy"
+         - "Creative"
+         - "Energetic"
+         - "Talkative"
+     ▿ (2 elements)
+       - key: "negative"
+       ▿ value: 1 element
+         - "Dry Mouth"
+
+ */
