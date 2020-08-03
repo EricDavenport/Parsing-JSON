@@ -16,6 +16,7 @@
 		58E2006724D8538600F8E15D /* presidents.json in Resources */ = {isa = PBXBuildFile; fileRef = 58E2006624D8538600F8E15D /* presidents.json */; };
 		58E2006924D8540300F8E15D /* President.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E2006824D8540300F8E15D /* President.swift */; };
 		58E2007124D8556500F8E15D /* Parsing_JSON_Using_BundleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E2007024D8556500F8E15D /* Parsing_JSON_Using_BundleTests.swift */; };
+		58E2007924D8582400F8E15D /* Bundle+ParsingJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E2007824D8582400F8E15D /* Bundle+ParsingJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		58E2006E24D8556500F8E15D /* Parsing-JSON-Using-BundleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Parsing-JSON-Using-BundleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		58E2007024D8556500F8E15D /* Parsing_JSON_Using_BundleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parsing_JSON_Using_BundleTests.swift; sourceTree = "<group>"; };
 		58E2007224D8556500F8E15D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58E2007824D8582400F8E15D /* Bundle+ParsingJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+ParsingJSON.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				58E2005224D8535100F8E15D /* AppDelegate.swift */,
 				58E2005424D8535100F8E15D /* SceneDelegate.swift */,
 				58E2005624D8535100F8E15D /* ViewController.swift */,
+				58E2007824D8582400F8E15D /* Bundle+ParsingJSON.swift */,
 				58E2005824D8535100F8E15D /* Main.storyboard */,
 				58E2006824D8540300F8E15D /* President.swift */,
 				58E2006624D8538600F8E15D /* presidents.json */,
@@ -207,6 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58E2007924D8582400F8E15D /* Bundle+ParsingJSON.swift in Sources */,
 				58E2006924D8540300F8E15D /* President.swift in Sources */,
 				58E2005724D8535100F8E15D /* ViewController.swift in Sources */,
 				58E2005324D8535100F8E15D /* AppDelegate.swift in Sources */,

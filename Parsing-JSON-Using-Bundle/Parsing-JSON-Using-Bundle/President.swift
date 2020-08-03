@@ -8,14 +8,13 @@
 
 import Foundation
 
-struct President: Decodable {  // Decodable for JSONDecoder
-  
+struct President: Decodable, Hashable {  // Decodable for JSONDecoder
   let number: Int
-  let name: String   // President.president - wouldn't work  "president"
+  let name: String   // originally called "president"
   let birthYear: Int
-  let deathYear: Int
+  let deathYear: Int?
   let tookOffice: String
-  let leftOffice: String
+  let leftOffice: String?
   let party: String
   
   private enum CodingKeys: String, CodingKey {
